@@ -1,13 +1,17 @@
 import React from 'react';
 import Navigation from '../components/navigation';
-// import Image from 'next/image'
+import Head from 'next/head';
 
 const About = () => {
     return (
         <div>
+            <Head>
+                {/* title */}
+                <title>About</title>
+            </Head>
             <Navigation />
-           <h2>This is About page</h2> 
-           <img src="images/laptop.jpg" alt="laptop" width="400" height="400" />
+            <h2>This is About page</h2>
+            <img src="images/laptop.jpg" alt="laptop" width="400" height="400" />
         </div>
     )
 }
