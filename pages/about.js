@@ -1,8 +1,27 @@
 import React from 'react';
 import Navigation from '../components/navigation';
 import Head from 'next/head';
+import axios from 'axios';
 
-const About = () => {
+export  const getStaticProps = async () =>  {
+    try {
+        const res = await axios.get(
+          `https://restcountries.eu/rest/v2/all`
+        );
+        if (res?.status === 200 && res?.data) {
+            return {
+                props: {
+                    countryList: res?.data
+                }
+            }
+        }
+    } catch (error) {
+        console.log(error?.message);
+    }
+}
+
+const About = ({countryList}) => {
+    console.log('countryList',countryList[0]);
     return (
         <div>
             <Head>
