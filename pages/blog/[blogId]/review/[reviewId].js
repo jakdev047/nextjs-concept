@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Navigation from "../../components/navigation";
+import Navigation from "../../../../components/navigation";
 
-const SingleBlog = () => {
+const BlogReview = () => {
   const router = useRouter();
-  const blogId = router?.query?.blogId;
+  const { blogId, reviewId } = router?.query;
   return (
     <div>
       <Head>
@@ -13,9 +13,11 @@ const SingleBlog = () => {
         <title>Blog</title>
       </Head>
       <Navigation />
-      <h2>Blog {blogId}</h2>
+      <h2>
+        Review {reviewId} for Blog {blogId}
+      </h2>
     </div>
   );
 };
 
-export default SingleBlog;
+export default BlogReview;
