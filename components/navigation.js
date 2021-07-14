@@ -6,7 +6,19 @@ const Navigation = () => {
         <div>
             <ul>
                 <li><Link href="/">Home</Link></li>
-                <li><Link href="/about">About</Link></li>
+                <li>
+                    <Link 
+                        href={{
+                            pathname:"/about",
+                            query:{
+                                firstName:"Jubayer",
+                                lastName:"Khan"
+                            }
+                        }}
+                    >
+                        About
+                    </Link>
+                </li>
                 <li><Link href="/contact">Contact</Link></li>
                 <li><Link href="/login">Login</Link></li>
             </ul>
