@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/navigation";
 import Head from "next/head";
+import Router from "next/router";
 
 export const getStaticProps = async () => {
   return {
@@ -20,6 +21,7 @@ const Login = ({ BASEAPIURL }) => {
       </Head>
       <Navigation />
       <h2>This is Login page</h2>
+      <button onClick={() => Router.push("/contact")}>Go to Contact</button>
     </div>
   );
 };
