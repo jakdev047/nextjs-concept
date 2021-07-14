@@ -22,6 +22,7 @@ const Login = ({ BASEAPIURL }) => {
       <Navigation />
       <h2>This is Login page</h2>
       <button onClick={() => Router.push("/contact")}>Go to Contact</button>
+      {/* <button onClick={() => Router.push("/contact",{shallow:true})}>Go to Contact</button> */}
     </div>
   );
 };
